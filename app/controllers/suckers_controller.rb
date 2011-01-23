@@ -20,7 +20,7 @@ class SuckersController < ApplicationController
   end
   
   def destroy
-    Sucker.find(params[:id]).destroy
+    Sucker.find_by_name(params[:id]).destroy
     redirect_to suckers_path
   end
   
