@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Suky</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+<div id="sidebar">
+  <h1><a href="#">Suckers Panel</a></h1>
+  <p> A simple, fluid, light on dark template by Six Shooter Media. </p>
+  <ol id="nav">
+    <li><%= link_to "Home", suckers_path%></li>
+    <li><%= link_to "Test", test_path%></li>
+    <li><%= link_to "Show All", "#"%></li>
+    <br />
+    <li><%= link_to "Logout", "#"%></li>
+  </ol>
+</div>
+
+<div id="content">
+  <h2 class="first"><id="intro">All Suckers</a></h2>
+<%= yield %>
+
+
+</div>
+
+<div id="footer">
+    <%= debug(params) if Rails.env.development? %>
+   Template design by <a href="#">Me</a>.
+<br />
+© All your copyright information here. 
+</div>
+
+</body>
+
+</html>

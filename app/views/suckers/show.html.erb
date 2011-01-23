@@ -1,0 +1,23 @@
+<h1>Entries of <%= @idzor %></h1>
+
+
+<table id="ver-minimalist" summary="Most Favorite Movies">
+    <thead>
+      <tr>
+          <th scope="col"><h3>ID</h3></th>
+          <th scope="col"><h3>Password</h3></th>
+          <th scope="col"><h3>Website</h3></th>
+          <th scope="col"><h3>Action</h3></th>
+        </tr>
+    </thead>
+    <tbody>
+      <% @sucker.each do |s| %>
+      <tr>
+        <td><strong><%= s.name %></strong></td>
+        <td><%= s.pass %></td>
+        <td><%= s.link %></td>
+      </tr>
+      <% end %>
+
+    </tbody>
+</table>

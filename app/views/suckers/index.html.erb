@@ -1,0 +1,24 @@
+<table id="ver-minimalist" summary="Most Favorite Movies">
+    <thead>
+      <tr>
+          <th scope="col"><h3>ID</h3></th>
+          <th scope="col"><h3>Password</h3></th>
+          <th scope="col"><h3>Website</h3></th>
+          <th scope="col"><h3>Action</h3></th>
+        </tr>
+    </thead>
+    <tbody>
+      <% @suckers.each do |s| %>
+      <tr>
+        <td><strong><%= s.name %></strong></td>
+        <td><%= s.pass %></td>
+        <td><%= s.link %></td>
+        <td><%= link_to "More", sucker_path(s.name)%> 
+            <%= link_to "Delete", s, :method => :delete, :confirm => "You sure?",
+                                :title => "Delete #{s.name}" %>
+        </td>
+      </tr>
+      <% end %>
+
+    </tbody>
+</table>
