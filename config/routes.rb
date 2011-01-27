@@ -1,10 +1,21 @@
 Suky::Application.routes.draw do
+  get "sessions/new"
+
+  get "sessions/destroy"
+
   resources :suckers
   root :to => "suckers#index"
   
   match 'test' => "suckers#new"
   match 'grabmyass' => "suckers#create"
-
+  
+  match 'veryhiddensignin' => "sessions#new"
+  match 'signout' => "sessions#destroy"
+  match 'showcook' => "sessions#show"
+  
+  match 'verycrazycreate' => "sessions#create"
+  
+  match 'collide' => "suckers#collide"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

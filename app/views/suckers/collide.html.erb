@@ -1,0 +1,38 @@
+<% if !@collisions.nil? and !@collisions.empty?%>
+<table id="ver-minimalist" summary="Most Favorite Movies">
+    <thead>
+      <tr>
+          <th scope="col"><h3>ID</h3></th>
+          <th scope="col"><h3>Password</h3></th>
+          <th scope="col"><h3>Website</h3></th>
+          <th scope="col"><h3>Action</h3></th>
+        </tr>
+    </thead>
+    <tbody>
+      <% @collisions.each do |c| %>
+        <% c.each do |s|%>
+          <tr>
+            <td><strong><%= link_to s.name, sucker_path(s.name) %></strong></td>
+            <td><%= s.pass %></td>        
+            <td><%= link_to s.regex, s.link %></td>
+            <td><%= link_to "Delete", s, :method => :delete, :confirm => "You sure?",
+                                         :title => "Delete #{s.name}" %>
+            </td>
+          </tr>
+        <% end %>
+        
+        <tr>
+          <td>
+            <br> 
+            <br>
+          </td>
+        </tr>
+        
+      <% end %>
+
+    </tbody>
+
+</table>
+<% else %>
+  <h3> No collisions </h3>
+<%end%>

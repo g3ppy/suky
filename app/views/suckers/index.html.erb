@@ -1,3 +1,4 @@
+<h2 >All of them</h2>
 <table id="ver-minimalist" summary="Most Favorite Movies">
     <thead>
       <tr>
@@ -7,18 +8,19 @@
           <th scope="col"><h3>Action</h3></th>
         </tr>
     </thead>
+    <% if !@suckers.nil?%>
     <tbody>
       <% @suckers.each do |s| %>
       <tr>
-        <td><strong><%= s.name %></strong></td>
-        <td><%= s.pass %></td>
-        <td><%= s.link %></td>
-        <td><%= link_to "More", sucker_path(s.name)%> 
-            <%= link_to "Delete", s, :method => :delete, :confirm => "You sure?",
-                                :title => "Delete #{s.name}" %>
+        <td><strong><%= link_to s.name, sucker_path(s.name) %></strong></td>
+        <td><%= s.pass %></td>        
+        <td><%= link_to s.regex, s.link %></td>
+        <td><%= link_to "Delete", s, :method => :delete, :confirm => "You sure?",
+                                     :title => "Delete #{s.name}" %>
         </td>
       </tr>
       <% end %>
 
     </tbody>
+    <%end%>
 </table>

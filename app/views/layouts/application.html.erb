@@ -1,3 +1,4 @@
+<%if signed_in%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,16 +12,18 @@
   <h1><a href="#">Suckers Panel</a></h1>
   <p> A simple, fluid, light on dark template by Six Shooter Media. </p>
   <ol id="nav">
-    <li><%= link_to "Home", suckers_path%></li>
-    <li><%= link_to "Test", test_path%></li>
-    <li><%= link_to "Show All", "#"%></li>
+    <li><%= link_to "All", root_path%></li>
+    <li><%= link_to "Collisions", collide_path%></li>
     <br />
-    <li><%= link_to "Logout", "#"%></li>
+    <br />  
+    <li><%= link_to "Test", test_path%></li>
+    <li><%= link_to "ShowCook", showcook_path%></li>
+    <li><%= link_to "Sign Out", signout_path%></li>
   </ol>
 </div>
 
 <div id="content">
-  <h2 class="first"><id="intro">All Suckers</a></h2>
+  <h2 class="first"><id="intro">Supreme Suckers :P</a></h2>
 <%= yield %>
 
 
@@ -36,3 +39,10 @@
 </body>
 
 </html>
+<% else %>
+
+  <%= render "layouts/failzor" %>
+  <% if !@magicvar.nil? %>
+    <%= yield %>
+  <% end %>
+<% end %>

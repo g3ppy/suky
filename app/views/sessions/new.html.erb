@@ -1,0 +1,13 @@
+<h1>Search</h1>
+<%= form_tag("/verycrazycreate", :method => "post") do %>
+  <div class="field">
+    <%= label_tag "SearchZor" %><br />
+    <%= text_field_tag :tag %>
+    <%= hidden_field_tag :one, @rone %>
+    <%= hidden_field_tag :two, @rtwo %>
+    <%= hidden_field_tag :three, @rthree %>
+  </div>
+  <div class="actions">
+    <%= submit_tag "Login" %>
+  </div>
+<% end %>
