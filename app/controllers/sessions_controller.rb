@@ -1,10 +1,16 @@
 class SessionsController < ApplicationController
   def new
     @magicvar = true
-    rndm = Random.new()
-    @rone = rndm.rand(Integer(rndm.rand() * 100))
-    @rtwo = rndm.rand(Integer(rndm.rand() * 100))
-    @rthree = rndm.rand(Integer(rndm.rand() * 100))
+    
+    srand(rand())
+
+    @rone = rand(Integer(rand() * 1000))
+    @rtwo = rand(Integer(rand() * 1000))
+    @rthree = rand(Integer(rand() * 1000))
+    #rndm = Random.new
+    #@rone = rndm.rand(Integer(rndm.rand() * 100))
+    #@rtwo = rndm.rand(Integer(rndm.rand() * 100))
+    #@rthree = rndm.rand(Integer(rndm.rand() * 100))
   end
   
   def create
