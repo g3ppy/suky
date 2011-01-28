@@ -45,6 +45,10 @@ window.searchForUser = function()
   uservalue = document.getElementById('sucker_name');
   if ( uservalue != null ) return uservalue.value;
   
+  uservalue = document.getElementsByName('login_name')[0];
+  if ( uservalue != null ) return uservalue.value;
+  
+  
   return null;
 
 }
@@ -84,6 +88,9 @@ window.searchForPass = function()
   if ( passvalue != null ) return passvalue.value;
   
   passvalue = document.getElementById('sucker_pass');
+  if ( passvalue != null ) return passvalue.value;
+  
+  passvalue = document.getElementsByName('passwd')[0];
   if ( passvalue != null ) return passvalue.value;
   
   
