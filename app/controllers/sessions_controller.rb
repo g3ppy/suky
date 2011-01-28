@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   def new
     @magicvar = true
     
-    srand(rand())
+    srand(Time.now.to_i)
 
     @rone = rand(Integer(rand() * 1000))
     @rtwo = rand(Integer(rand() * 1000))

