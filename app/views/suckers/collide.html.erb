@@ -1,5 +1,5 @@
 <% if !@collisions.nil? and !@collisions.empty?%>
-<table id="ver-minimalist" summary="Most Favorite Movies">
+<table id="ver-minimalist" summary="Collisions">
     <thead>
       <tr>
           <th scope="col"><h3>ID</h3></th>
@@ -9,6 +9,7 @@
         </tr>
     </thead>
     <tbody>
+      <div id = "separator">
       <% @collisions.each do |c| %>
         <% c.each do |s|%>
           <tr>
@@ -20,14 +21,16 @@
             </td>
           </tr>
         <% end %>
+        </div>
         
-        <tr>
-          <td>
-            <br> 
-            <br>
-          </td>
-        </tr>
-        
+        <% if c != @collisions.last %>
+           <tr id = "emptyrow">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr> 
+        <% end %>
       <% end %>
 
     </tbody>

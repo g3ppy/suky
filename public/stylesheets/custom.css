@@ -180,3 +180,10 @@ ol li {
   border-left: 30px;
   color: #669;
 }
+
+#emptyrow td
+{
+  height: 20px;
+  border-bottom: #FF0000;
+  border-bottom-style: dashed;
+}
