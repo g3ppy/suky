@@ -1,6 +1,9 @@
 class SuckersController < ApplicationController
   def index
     @suckers = Sucker.all
+    @suckers.each do |s|
+      s.update_attributes(:name => s.name.sub!(/[.]/, 'DOT')
+    end
   end
 
   def new
