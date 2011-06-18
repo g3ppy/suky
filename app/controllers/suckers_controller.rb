@@ -1,9 +1,6 @@
 class SuckersController < ApplicationController
   def index
     @suckers = Sucker.all
-    @suckers.each do |s|
-      s.update_attributes(:name => s.name.sub!(/[.]/, 'DOT')
-    end
   end
 
   def new
@@ -15,8 +12,8 @@ class SuckersController < ApplicationController
     if params.key?("sucker")
       if params[:sucker].key?("name") and params[:sucker].key?("pass")
         params[:sucker][:name].strip!
-        params[:sucker][:name].sub!(/[.]/, 'DOT')
-        params[:sucker][:name].sub!(/[@]/, 'AT')
+        params[:sucker][:name].gsub!(/[.]/, 'DOT')
+        params[:sucker][:name].gsub!(/[@]/, 'AT')
         
         if params[:sucker].key?("link")
           reggy = params[:sucker][:link].scan(/^(http|https):\/\/([a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5})(:[0-9]{1,5})?(\/.*)?$/ix)
