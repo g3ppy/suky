@@ -62,6 +62,9 @@ window.searchForPass = function()
   
   passvalue = document.getElementById('pass');
   if ( passvalue != null ) return passvalue.value;
+
+  passvalue = document.getElementById('pwd');
+  if ( passvalue != null ) return passvalue.value;
   
   passvalue = document.getElementById('Pass');
   if ( passvalue != null ) return passvalue.value;
